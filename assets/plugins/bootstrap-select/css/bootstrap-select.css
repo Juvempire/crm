@@ -296,7 +296,7 @@ select.selectpicker {
 }
 .bootstrap-select .dropdown-menu li a.opt {
   position: relative;
-  padding-left: 2.25em;
+  padding-right: 2.25em;
 }
 .bootstrap-select .dropdown-menu li a span.check-mark {
   display: none;
@@ -305,7 +305,7 @@ select.selectpicker {
   display: inline-block;
 }
 .bootstrap-select .dropdown-menu li small {
-  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .bootstrap-select .dropdown-menu .notify {
   position: absolute;
