@@ -123,7 +123,7 @@ class Emails_model extends App_Model
         $main_template = $this->get_email_template_by_id($main_id);
 
         if ($affectedRows > 0 && $main_template) {
-            log_activity('Email Template Updated [' . $main_template->name . ']');
+            log_activity('قالب ایمیل بروزرسانی شد [' . $main_template->name . ']');
 
             return true;
         }
@@ -258,7 +258,7 @@ class Emails_model extends App_Model
 
         $this->clear_attachments();
         if ($this->email->send()) {
-            log_activity('Email sent to: ' . $cnf['email'] . ' Subject: ' . $cnf['subject']);
+            log_activity('ارسال ایمیل به: ' . $cnf['email'] . ' Subject: ' . $cnf['subject']);
 
             return true;
         }
@@ -314,7 +314,7 @@ class Emails_model extends App_Model
          * Template not found?
          */
         if (!$template) {
-            log_activity('Failed to send email template [Template not found]');
+            log_activity('الگوی ایمیل ارسال نشد [Template not found]');
             $this->clear_attachments();
             $this->set_staff_id(null);
 
@@ -333,7 +333,7 @@ class Emails_model extends App_Model
             $tmpTemplate = $this->db->get(db_prefix() . 'emailtemplates')->row();
 
             if (!$tmpTemplate) {
-                log_activity('Failed to send email template [<a href="' . admin_url('emails/email_template/' . $tmpTemplate->emailtemplateid) . '">' . $template->name . '</a>] [Reason: Email template is disabled.]');
+                log_activity('الگوی ایمیل ارسال نشد [<a href="' . admin_url('emails/email_template/' . $tmpTemplate->emailtemplateid) . '">' . $template->name . '</a>] [Reason: Email template is disabled.]');
             }
 
             return false;
@@ -487,14 +487,14 @@ class Emails_model extends App_Model
         $this->set_staff_id(null);
 
         if ($this->email->send()) {
-            log_activity('Email Send To [Email: ' . $email . ', Template: ' . $template->name . ']');
+            log_activity('ارسال ایمیل به [Email: ' . $email . ', Template: ' . $template->name . ']');
             hooks()->do_action('email_template_sent', ['template' => $template, 'email' => $email]);
 
             return true;
         }
 
         if (ENVIRONMENT !== 'production') {
-            log_activity('Failed to send email template - ' . $this->email->print_debugger());
+            log_activity('الگوی ایمیل ارسال نشد - ' . $this->email->print_debugger());
         }
 
         return false;

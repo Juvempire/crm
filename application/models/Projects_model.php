@@ -585,7 +585,7 @@ class Projects_model extends App_Model
                 $show_to_customer = 0;
             }
             $this->log_activity($milestone->project_id, 'project_activity_created_milestone', $milestone->name, $show_to_customer);
-            log_activity('Project Milestone Created [ID:' . $insert_id . ']');
+            log_activity('نقطه عطف پروژه ایجاد شد [شناسه:' . $insert_id . ']');
 
             return $insert_id;
         }
@@ -613,7 +613,7 @@ class Projects_model extends App_Model
                 $show_to_customer = 0;
             }
             $this->log_activity($milestone->project_id, 'project_activity_updated_milestone', $milestone->name, $show_to_customer);
-            log_activity('Project Milestone Updated [ID:' . $id . ']');
+            log_activity('نقطه عطف پروژه بروزرسانی شد [شناسه:' . $id . ']');
 
             return true;
         }
@@ -672,7 +672,7 @@ class Projects_model extends App_Model
             $this->db->update(db_prefix() . 'tasks', [
                 'milestone' => 0,
             ]);
-            log_activity('Project Milestone Deleted [' . $id . ']');
+            log_activity('نقطه عطف پروژه حذف شد [' . $id . ']');
 
             return true;
         }
@@ -850,7 +850,7 @@ class Projects_model extends App_Model
 
             hooks()->do_action('after_add_project', $insert_id);
 
-            log_activity('New Project Created [ID: ' . $insert_id . ']');
+            log_activity('پروژه جدید ایجاد شد [شناسه: ' . $insert_id . ']');
 
             return $insert_id;
         }
@@ -1043,7 +1043,7 @@ class Projects_model extends App_Model
         }
         if ($affectedRows > 0) {
             $this->log_activity($id, 'project_activity_updated');
-            log_activity('Project Updated [ID: ' . $id . ']');
+            log_activity('پروژه به روز شد [شناسه: ' . $id . ']');
 
             if ($original_project->status != $data['status']) {
                 hooks()->do_action('project_status_changed', [
@@ -2071,7 +2071,7 @@ class Projects_model extends App_Model
 
             $this->log_activity($id, 'project_activity_created');
 
-            log_activity('Project Copied [ID: ' . $project_id . ', NewID: ' . $id . ']');
+            log_activity('پروژه کپی شد [شناسه: ' . $project_id . ', NewID: ' . $id . ']');
 
             hooks()->do_action('project_copied', [
                 'project_id'     => $project_id,
@@ -2224,7 +2224,7 @@ class Projects_model extends App_Model
             $this->db->where('project_id', $project_id);
             $this->db->delete(db_prefix() . 'pinned_projects');
 
-            log_activity('Project Deleted [ID: ' . $project_id . ', Name: ' . $project_name . ']');
+            log_activity('پروژه حذف شد [شناسه: ' . $project_id . ', Name: ' . $project_name . ']');
 
             hooks()->do_action('after_project_deleted', $project_id);
 
