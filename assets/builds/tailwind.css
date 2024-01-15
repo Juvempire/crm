@@ -11813,7 +11813,7 @@ body.modal-open {
   left: 0;
 }
 [dir="rtl"] .rtl\:tw-ml-3 {
-  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 [dir="rtl"] .rtl\:tw-ml-1\.5 {
   margin-right: 0.375rem;
@@ -12035,7 +12035,7 @@ body.modal-open {
     align-self: center;
   }
   .md\:tw-border-r {
-    border-right-width: 1px;
+    border-left-width: 1px;
   }
   .md\:tw-border-solid {
     border-style: solid;
@@ -12080,7 +12080,7 @@ body.modal-open {
     border-width: 0;
   }
   .lg\:tw-border-r-0 {
-    border-right-width: 0;
+    border-left-width: 0;
   }
   .lg\:tw-border-r {
     border-right-width: 1px;
