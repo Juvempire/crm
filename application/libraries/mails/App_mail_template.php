@@ -113,7 +113,7 @@ class App_mail_template
          * Template not found?
          */
         if (!$this->template) {
-            log_activity('الگوی ایمیل ارسال نشد [Template Not Found]');
+            log_activity('الگوی ایمیل ارسال نشد [قالب یافت نشد]');
             $this->clear();
 
             return false;
@@ -204,7 +204,7 @@ class App_mail_template
         $this->_attachments();
 
         if ($this->ci->email->send($this->skipQueue)) {
-            log_activity('ارسال ایمیل به [Email: ' . $this->send_to . ', Template: ' . $this->template->name . ']');
+            log_activity('ارسال ایمیل به [ایمیل: ' . $this->send_to . ', قالب: ' . $this->template->name . ']');
 
             hooks()->do_action('email_template_sent', [
                 'template'     => $this->template,

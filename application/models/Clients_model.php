@@ -215,7 +215,7 @@ class Clients_model extends App_Model
                 'with_contact'  => $withContact,
             ]);
 
-            log_activity('New Client Created [' . $log . ']', $isStaff);
+            log_activity('مشتری جدید ایجاد شد [' . $log . ']', $isStaff);
         }
 
         return $client_id;
@@ -310,7 +310,7 @@ class Clients_model extends App_Model
         ]);
 
         if ($updated) {
-            log_activity('Customer Info Updated [ID: ' . $id . ']');
+            log_activity('اطلاعات مشتری به روز شد [شناسه: ' . $id . ']');
         }
 
         return $updated;
@@ -431,7 +431,7 @@ class Clients_model extends App_Model
         }
 
         if ($affectedRows > 0 && !$set_password_email_sent) {
-            log_activity('Contact Updated [ID: ' . $id . ']');
+            log_activity('مخاطب به روز شد [شناسه: ' . $id . ']');
 
             return true;
         } elseif ($affectedRows > 0 && $set_password_email_sent) {
@@ -611,7 +611,7 @@ class Clients_model extends App_Model
                 $this->tickets_model->transfer_email_tickets_to_contact($data['email'], $contact_id);
             }
 
-            log_activity('Contact Created [ID: ' . $contact_id . ']');
+            log_activity('مخاطب ایجاد شد [شناسه: ' . $contact_id . ']');
 
             hooks()->do_action('contact_created', $contact_id);
 
@@ -686,7 +686,7 @@ class Clients_model extends App_Model
                 $this->authentication_model->set_password_email($data['email'], 0);
             }
 
-            log_activity('Contact Created [ID: ' . $contact_id . ']');
+            log_activity('مخاطب ایجاد شد [شناسه: ' . $contact_id . ']');
             hooks()->do_action('contact_created', $contact_id);
 
             return $contact_id;
@@ -742,7 +742,7 @@ class Clients_model extends App_Model
         }
         if ($affectedRows > 0) {
             hooks()->do_action('customer_updated_company_info', $id);
-            log_activity('Customer Info Updated From Clients Area [ID: ' . $id . ']');
+            log_activity('اطلاعات مشتری از ناحیه مشتریان به روز شده است [شناسه: ' . $id . ']');
 
             return true;
         }
@@ -1028,7 +1028,7 @@ class Clients_model extends App_Model
                 $this->db->delete(db_prefix() . 'activity_log');
             }
 
-            log_activity('Client Deleted [ID: ' . $id . ']');
+            log_activity('مشتری حذف شد [شناسه: ' . $id . ']');
 
             return true;
         }
@@ -1297,7 +1297,7 @@ class Clients_model extends App_Model
                 $deleted = true;
                 $this->db->where('file_id', $id);
                 $this->db->delete(db_prefix() . 'shared_customer_files');
-                log_activity('Customer Attachment Deleted [ID: ' . $attachment->rel_id . ']');
+                log_activity('پیوست مشتری حذف شد [شناسه: ' . $attachment->rel_id . ']');
             }
 
             if (is_dir(get_upload_path_by_type('customer') . $attachment->rel_id)) {
@@ -1332,7 +1332,7 @@ class Clients_model extends App_Model
                 'status' => $status,
             ]);
 
-            log_activity('Contact Status Changed [ContactID: ' . $id . ' Status(Active/Inactive): ' . $status . ']');
+            log_activity('وضعیت مخاطب تغییر کرد [شناسه مخاطب: ' . $id . ' Status(Active/Inactive): ' . $status . ']');
 
             return true;
         }
@@ -1359,7 +1359,7 @@ class Clients_model extends App_Model
                 'status' => $status,
             ]);
 
-            log_activity('Customer Status Changed [ID: ' . $id . ' Status(Active/Inactive): ' . $status . ']');
+            log_activity('وضعیت مشتری تغییر کرد [شناسه: ' . $id . ' Status(Active/Inactive): ' . $status . ']');
 
             return true;
         }
@@ -1393,7 +1393,7 @@ class Clients_model extends App_Model
         ]);
 
         if ($this->db->affected_rows() > 0) {
-            log_activity('Contact Password Changed [ContactID: ' . $id . ']');
+            log_activity('رمز عبور مخاطب تغییر کرد [شناسه مخاطب: ' . $id . ']');
 
             return true;
         }

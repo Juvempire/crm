@@ -390,7 +390,7 @@ function update_invoice_status($id, $force_update = false, $prevent_logging = fa
             return $status;
         }
 
-        $log = 'Invoice Status Updated [Invoice Number: ' . format_invoice_number($invoice->id) . ', From: ' . format_invoice_status($original_status, '', false) . ' To: ' . format_invoice_status($status, '', false) . ']';
+        $log = 'وضعیت فاکتور به روز شد [شماره فاکتور: ' . format_invoice_number($invoice->id) . ', از: ' . format_invoice_status($original_status, '', false) . ' به: ' . format_invoice_status($status, '', false) . ']';
 
         log_activity($log, null);
 

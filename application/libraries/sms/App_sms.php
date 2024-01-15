@@ -199,7 +199,7 @@ class App_sms
         $GLOBALS['sms_error'] = $error;
 
         if ($log_message) {
-            log_activity('Failed to send SMS via ' . get_class($this) . ': ' . $error);
+            log_activity('ارسال پیامک انجام نشد از طریق ' . get_class($this) . ': ' . $error);
         }
 
         return $this;
@@ -270,7 +270,7 @@ class App_sms
      */
     protected function logSuccess($number, $message)
     {
-        return log_activity('SMS sent to ' . $number . ', Message: ' . $message);
+        return log_activity('اس ام اس ارسال شد به ' . $number . ', پیام: ' . $message);
     }
 
     private function set_default_triggers()

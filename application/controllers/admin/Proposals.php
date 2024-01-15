@@ -352,7 +352,7 @@ class Proposals extends AdminController
                     'estimate_id' => $estimate_id,
                     'status'      => 3,
                 ]);
-                log_activity('Proposal Converted to Estimate [EstimateID: ' . $estimate_id . ', ProposalID: ' . $id . ']');
+                log_activity('پروپوزال به پیش فاکتور تبدیل شد [شناسه پیش فاکتور: ' . $estimate_id . ', شناسه پروپوزال: ' . $id . ']');
 
                 hooks()->do_action('proposal_converted_to_estimate', ['proposal_id' => $id, 'estimate_id' => $estimate_id]);
 
@@ -383,7 +383,7 @@ class Proposals extends AdminController
                     'invoice_id' => $invoice_id,
                     'status'     => 3,
                 ]);
-                log_activity('Proposal Converted to Invoice [InvoiceID: ' . $invoice_id . ', ProposalID: ' . $id . ']');
+                log_activity('پروپوزال به فاکتور تبدیل شد [شناسه فاکتور: ' . $invoice_id . ', شناسه پروپوزال: ' . $id . ']');
                 hooks()->do_action('proposal_converted_to_invoice', ['proposal_id' => $id, 'invoice_id' => $invoice_id]);
                 redirect(admin_url('invoices/invoice/' . $invoice_id));
             } else {

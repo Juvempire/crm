@@ -599,7 +599,7 @@ class Leads extends AdminController
                     $this->db->update(db_prefix() . 'clients', ['leadid' => null]);
                 }
 
-                log_activity('Created Lead Client Profile [LeadID: ' . $data['leadid'] . ', ClientID: ' . $id . ']');
+                log_activity('پروفایل مشتری بالقوه ایجاد شده است [شناسه مشتری بالقوه: ' . $data['leadid'] . ', شناسه مشتری: ' . $id . ']');
                 hooks()->do_action('lead_converted_to_customer', ['lead_id' => $data['leadid'], 'customer_id' => $id]);
                 redirect(admin_url('clients/client/' . $id));
             }
