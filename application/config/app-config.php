@@ -42,15 +42,15 @@ define('APP_DB_HOSTNAME', 'localhost');
 /**
  * The username used to connect to the database
  */
-define('APP_DB_USERNAME', 'crmuser');
+define('APP_DB_USERNAME', 'crmuserweb');
 /**
- * The password used to connect to the database
+ * The password used to connect to the database : C*a0NGbzsj@kyIu-
  */
-define('APP_DB_PASSWORD', 'C*a0NGbzsj@kyIu-');
+define('APP_DB_PASSWORD', '7R[JQjCYNnF*D]2C');
 /**
  * The name of the database you want to connect to
  */
-define('APP_DB_NAME', 'crmdb');
+define('APP_DB_NAME', 'crmdbweb');
 
 /**
  * @since  2.3.0
