@@ -4,10 +4,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
 Module Name: ماژول پیامک کاوه نگار
 Description: ارسال پیامک‌های سیستم از طریق سامانه پیامکی کاوه نگار
-Author: میلاد مالدار
+Author: تسکیفای
 Version: 1.0.0
 Requires at least: 2.9.*
-Author URI: https://miladworkshop.ir
+Author URI: https://taskify.ir
 */
 
 define('KAVENEGAR_MODULE_NAME', 'kavenegar');

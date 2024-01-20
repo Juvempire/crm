@@ -2,11 +2,9 @@
 /*
  * 	Perfex CRM FARAPAYAMAK Sms Module
  * 	
- * 	Link 	: https://github.com/miladworkshop/perfex-farapayamak
- * 	
- * 	Author 	: Milad Maldar
- * 	E-mail 	: info@miladworkshop
- * 	Website : https://miladworkshop.ir
+ * 	Author 	: Taskify
+ * 	E-mail 	: saztalk@gmail.com
+ * 	Website : https://taskify.ir
 */
 
 defined('BASEPATH') or exit('No direct script access allowed');
@@ -27,7 +25,7 @@ class Sms_farapayamak extends App_sms
 
         $this->add_gateway('farapayamak', [
             'name'    => 'فرا پیامک',
-            'info'    => "<p>ارسال کلیه پیامک‌های سیستم از طریق سامانه پیامکی <a href='https://farapayamak.ir' target='_blank'>فرا پیامک</a> - طراحی و توسطعه داده شده توسط <a href='https://miladworkshop.ir' target='_blank'>میلاد مالدار</a></p><hr class='hr-10'>",
+            'info'    => "<p>ارسال کلیه پیامک‌های سیستم از طریق سامانه پیامکی <a href='https://farapayamak.ir' target='_blank'>فرا پیامک</a> - طراحی و توسطعه داده شده توسط <a href='https://taskify.ir' target='_blank'>تسکیفای</a></p><hr class='hr-10'>",
             'options' => [
                 [
                     'name'  => 'from',

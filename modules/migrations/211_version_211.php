@@ -2,11 +2,9 @@
 /*
  * 	Perfex CRM SMSIR Sms Module
  * 	
- * 	Link 	: https://github.com/miladworkshop/perfex-smsir
- * 	
- * 	Author 	: Milad Maldar
- * 	E-mail 	: info@miladworkshop
- * 	Website : https://miladworkshop.ir
+ * 	Author 	: Taskify
+ * 	E-mail 	: saztalk@gmail.com
+ * 	Website : https://taskify.ir
 */
 
 defined('BASEPATH') or exit('No direct script access allowed');

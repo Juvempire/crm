@@ -15,7 +15,7 @@ class Sms_kavenegar extends App_sms
 
         $this->add_gateway('kavenegar', [
             'name'    => 'کاوه نگار',
-            'info'    => "<p>ارسال کلیه پیامک‌های سیستم از طریق سامانه پیامکی <a href='https://kavenegar.com' target='_blank'>کاوه نگار</a> - طراحی و توسطعه داده شده توسط <a href='https://miladworkshop.ir' target='_blank'>میلاد مالدار</a></p><hr class='hr-10'>",
+            'info'    => "<p>ارسال کلیه پیامک‌های سیستم از طریق سامانه پیامکی <a href='https://kavenegar.com' target='_blank'>کاوه نگار</a> - طراحی و توسطعه داده شده توسط <a href='https://taskify.ir' target='_blank'>تسکیفای</a></p><hr class='hr-10'>",
             'options' => [
                 [
                     'name'  => 'from',

@@ -2,11 +2,9 @@
 /*
  * 	Perfex CRM SMSIR Sms Module
  * 	
- * 	Link 	: https://github.com/miladworkshop/perfex-smsir
- * 	
- * 	Author 	: Milad Maldar
- * 	E-mail 	: info@miladworkshop
- * 	Website : https://miladworkshop.ir
+ * 	Author 	: Taskify
+ * 	E-mail 	: saztalk@gmail.com
+ * 	Website : https://taskify.ir
 */
 
 defined('BASEPATH') or exit('No direct script access allowed');
@@ -14,10 +12,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
 Module Name: ماژول پیامک ایده پردازان ( sms.ir )
 Description: ارسال پیامک‌های سیستم از طریق سامانه پیامکی ایده پردازان ( sms.ir )
-Author: میلاد مالدار
+Author:  تسکیفای
 Version: 1.0.0
 Requires at least: 2.9.*
-Author URI: https://miladworkshop.ir
+Author URI: https://taskify.ir
 */
 
 define('SMSIR_MODULE_NAME', 'smsir');
